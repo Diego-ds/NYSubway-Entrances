@@ -1,0 +1,13 @@
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\bin\Debug\New York Subway.exe.config
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\bin\Debug\New York Subway.exe
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\bin\Debug\New York Subway.pdb
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\bin\Debug\GMap.NET.Core.dll
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\obj\Debug\New York Subway.csprojAssemblyReference.cache
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\obj\Debug\New_York_Subway.Form1.resources
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\obj\Debug\New_York_Subway.Properties.Resources.resources
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\obj\Debug\New York Subway.csproj.GenerateResource.cache
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\obj\Debug\New York Subway.csproj.CoreCompileInputs.cache
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\obj\Debug\New York Subway.csproj.CopyComplete
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\obj\Debug\New York Subway.exe
+C:\Users\prestamo\source\repos\New York Subway\New York Subway\obj\Debug\New York Subway.pdb
