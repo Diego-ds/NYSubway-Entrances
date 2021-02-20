@@ -32,5 +32,84 @@ namespace New_York_Subway.model
 
         //Getters and setters
         
+        public string getDivision()
+        {
+            return division;
+        }
+
+        public string getLine()
+        {
+            return line;
+        }
+
+        public string getStationName()
+        {
+            return stationName;
+        }
+
+        public double getLatitude()
+        {
+            return latitude;
+        }
+
+        public double getLongitude()
+        {
+            return longitude;
+        }
+
+        public string getType()
+        {
+            return type;
+        }
+
+        public bool getVending()
+        {
+            return vending;
+        }
+
+        public bool getStaffing()
+        {
+            return staffing;
+        }
+
+        public void setDivision(string division)
+        {
+            this.division = division;
+        }
+
+        public void setLine(string line)
+        {
+            this.line = line;
+        }
+
+        public void setStationName(string stationName)
+        {
+            this.stationName = stationName;
+        }
+
+        public void setLatitude(double latitude)
+        {
+            this.latitude = latitude;
+        }
+
+        public void setLongitude(double longitude)
+        {
+            this.longitude = longitude;
+        }
+
+        public void setType(string type)
+        {
+            this.type = type;
+        }
+
+        public void setVending(bool vending)
+        {
+            this.vending = vending;
+        }
+
+        public void setStaffing(bool staffing)
+        {
+            this.staffing = staffing;
+        }
     }
 }
