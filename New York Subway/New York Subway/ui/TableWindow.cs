@@ -16,7 +16,7 @@ namespace New_York_Subway
         {
             InitializeComponent();
             manager = new Manager();
-            form2 = new Form2(manager);
+            form2 = new Form2(manager, this);
         }
 
         private void button2_Click(object sender, EventArgs e)

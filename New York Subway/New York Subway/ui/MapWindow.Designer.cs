@@ -32,10 +32,14 @@ namespace New_York_Subway
             this.gMap = new GMap.NET.WindowsForms.GMapControl();
             this.divisionComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.showAllButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gMap
@@ -88,24 +92,15 @@ namespace New_York_Subway
             this.label1.TabIndex = 2;
             this.label1.Text = "Filter by division";
             // 
-            // button1
+            // showAllButton
             // 
-            this.button1.Location = new System.Drawing.Point(781, 117);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 21);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(781, 90);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 21);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Show All";
-            this.button2.UseVisualStyleBackColor = true;
+            this.showAllButton.Location = new System.Drawing.Point(781, 90);
+            this.showAllButton.Name = "showAllButton";
+            this.showAllButton.Size = new System.Drawing.Size(121, 21);
+            this.showAllButton.TabIndex = 4;
+            this.showAllButton.Text = "Show All";
+            this.showAllButton.UseVisualStyleBackColor = true;
+            this.showAllButton.Click += new System.EventHandler(this.showAllButton_Click);
             // 
             // label2
             // 
@@ -116,30 +111,72 @@ namespace New_York_Subway
             this.label2.TabIndex = 5;
             this.label2.Text = "Marker Control";
             // 
-            // button3
+            // backButton
             // 
-            this.button3.Location = new System.Drawing.Point(781, 440);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 21);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "< Back To Table";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.backButton.Location = new System.Drawing.Point(781, 440);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(121, 21);
+            this.backButton.TabIndex = 6;
+            this.backButton.Text = "< Back To Table";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(25, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Blue = BMT";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(21, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Orange = IRT";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(29, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Red = IND";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(781, 193);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(121, 100);
+            this.panel1.TabIndex = 10;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 473);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.showAllButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.divisionComboBox);
             this.Controls.Add(this.gMap);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "NY City subway entrance map";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,9 +187,12 @@ namespace New_York_Subway
         private GMap.NET.WindowsForms.GMapControl gMap;
         private System.Windows.Forms.ComboBox divisionComboBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button showAllButton;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
     }
 }
