@@ -53,7 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="model\Division.cs" />
     <Compile Include="model\Entrance.cs" />
+    <Compile Include="model\Manager.cs" />
     <Compile Include="ui\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
