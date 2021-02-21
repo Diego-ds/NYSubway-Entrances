@@ -31,5 +31,25 @@ namespace New_York_Subway
         {
 
         }
+
+        private void searchLineButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchNameButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchLatitudeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchLongitudeButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
