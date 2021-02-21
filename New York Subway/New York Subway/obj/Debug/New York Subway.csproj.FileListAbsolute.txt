@@ -24,3 +24,4 @@ C:\Users\prestamo\Documents\GitHub\NYSubway-Entrances\New York Subway\New York S
 C:\Users\prestamo\Documents\GitHub\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New York Subway.csproj.CopyComplete
 C:\Users\prestamo\Documents\GitHub\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New York Subway.exe
 C:\Users\prestamo\Documents\GitHub\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New York Subway.pdb
+C:\Users\prestamo\Documents\GitHub\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New_York_Subway.Form2.resources

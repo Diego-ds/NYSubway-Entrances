@@ -21,14 +21,9 @@ namespace New_York_Subway
             form2 = new Form2();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            form2.Show();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
+            //load File
 
         }
 
@@ -50,6 +45,12 @@ namespace New_York_Subway
         private void searchLongitudeButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void loadMapButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            form2.Show();
         }
     }
 }
