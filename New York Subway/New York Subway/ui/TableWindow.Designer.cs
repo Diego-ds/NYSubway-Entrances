@@ -75,6 +75,10 @@ namespace New_York_Subway
             this.loadMapButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.resetTableButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -147,7 +151,7 @@ namespace New_York_Subway
             this.LoadFileButton.Name = "LoadFileButton";
             this.LoadFileButton.Size = new System.Drawing.Size(96, 28);
             this.LoadFileButton.TabIndex = 2;
-            this.LoadFileButton.Text = "Load a file";
+            this.LoadFileButton.Text = "Load file...";
             this.LoadFileButton.UseVisualStyleBackColor = true;
             this.LoadFileButton.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -163,6 +167,10 @@ namespace New_York_Subway
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
@@ -453,13 +461,50 @@ namespace New_York_Subway
             // resetTableButton
             // 
             this.resetTableButton.Enabled = false;
-            this.resetTableButton.Location = new System.Drawing.Point(791, 270);
+            this.resetTableButton.Location = new System.Drawing.Point(791, 267);
             this.resetTableButton.Name = "resetTableButton";
-            this.resetTableButton.Size = new System.Drawing.Size(92, 23);
+            this.resetTableButton.Size = new System.Drawing.Size(96, 28);
             this.resetTableButton.TabIndex = 8;
             this.resetTableButton.Text = "Reset table";
             this.resetTableButton.UseVisualStyleBackColor = true;
             this.resetTableButton.Click += new System.EventHandler(this.resetTableButton_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 141);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "min:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(165, 141);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "max:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 183);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "min:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(165, 183);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "max:";
             // 
             // Form1
             // 
@@ -524,6 +569,10 @@ namespace New_York_Subway
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button resetTableButton;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
 

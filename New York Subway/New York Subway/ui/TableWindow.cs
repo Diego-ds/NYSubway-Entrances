@@ -158,70 +158,79 @@ namespace New_York_Subway
 
         private void searchLatitudeButton_Click(object sender, EventArgs e)
         {
-            Hashtable temp = manager.getDivisions();
-            table.Rows.Clear();
-            double latMin = Double.Parse(latMinTextBox.Text);
-            double latMax = Double.Parse(latMaxTextBox.Text);
-
-            if (latMin != 0.0 && latMax != 0.0)
+            
+            if (!latMinTextBox.Text.Equals("") && !latMaxTextBox.Text.Equals(""))
             {
-                foreach (DictionaryEntry element in temp)
+                Hashtable temp = manager.getDivisions();
+                table.Rows.Clear();
+
+                double latMin = Double.Parse(latMinTextBox.Text);
+                double latMax = Double.Parse(latMaxTextBox.Text);
+
+                if (latMin != 0.0 && latMax != 0.0)
                 {
-                    Division div = (Division)element.Value;
-
-                    List<Entrance> ent = div.GetEntrances();
-
-                    foreach (Entrance entry in ent)
+                    foreach (DictionaryEntry element in temp)
                     {
-                        double lat = entry.getLatitude();
-                        if (lat >= latMin && lat <= latMax)
-                        {
-                            int n = table.Rows.Add();
+                        Division div = (Division)element.Value;
 
-                            table.Rows[n].Cells[0].Value = div.getName();
-                            table.Rows[n].Cells[1].Value = entry.getLine();
-                            table.Rows[n].Cells[2].Value = entry.getStationName();
-                            table.Rows[n].Cells[3].Value = entry.getLatitude();
-                            table.Rows[n].Cells[4].Value = entry.getLongitude();
-                            table.Rows[n].Cells[5].Value = entry.getType();
-                            table.Rows[n].Cells[6].Value = entry.getVendingText();
-                            table.Rows[n].Cells[7].Value = entry.getStaffingText();
+                        List<Entrance> ent = div.GetEntrances();
+
+                        foreach (Entrance entry in ent)
+                        {
+                            double lat = entry.getLatitude();
+                            if (lat >= latMin && lat <= latMax)
+                            {
+                                int n = table.Rows.Add();
+
+                                table.Rows[n].Cells[0].Value = div.getName();
+                                table.Rows[n].Cells[1].Value = entry.getLine();
+                                table.Rows[n].Cells[2].Value = entry.getStationName();
+                                table.Rows[n].Cells[3].Value = entry.getLatitude();
+                                table.Rows[n].Cells[4].Value = entry.getLongitude();
+                                table.Rows[n].Cells[5].Value = entry.getType();
+                                table.Rows[n].Cells[6].Value = entry.getVendingText();
+                                table.Rows[n].Cells[7].Value = entry.getStaffingText();
+                            }
                         }
                     }
                 }
             }
+            
         }
 
         private void searchLongitudeButton_Click(object sender, EventArgs e)
         {
-            Hashtable temp = manager.getDivisions();
-            table.Rows.Clear();
-            double longMin = Double.Parse(longMinTextBox.Text);
-            double longMax = Double.Parse(longMaxTextBox.Text);
-
-            if (longMin != 0.0 && longMax != 0.0)
+            if (!longMinTextBox.Text.Equals("") && !longMaxTextBox.Text.Equals(""))
             {
-                foreach (DictionaryEntry element in temp)
+                Hashtable temp = manager.getDivisions();
+                table.Rows.Clear();
+                double longMin = Double.Parse(longMinTextBox.Text);
+                double longMax = Double.Parse(longMaxTextBox.Text);
+
+                if (longMin != 0.0 && longMax != 0.0)
                 {
-                    Division div = (Division)element.Value;
-
-                    List<Entrance> ent = div.GetEntrances();
-
-                    foreach (Entrance entry in ent)
+                    foreach (DictionaryEntry element in temp)
                     {
-                        double lon = entry.getLongitude();
-                        if (lon >= longMin && lon <= longMax)
-                        {
-                            int n = table.Rows.Add();
+                        Division div = (Division)element.Value;
 
-                            table.Rows[n].Cells[0].Value = div.getName();
-                            table.Rows[n].Cells[1].Value = entry.getLine();
-                            table.Rows[n].Cells[2].Value = entry.getStationName();
-                            table.Rows[n].Cells[3].Value = entry.getLatitude();
-                            table.Rows[n].Cells[4].Value = entry.getLongitude();
-                            table.Rows[n].Cells[5].Value = entry.getType();
-                            table.Rows[n].Cells[6].Value = entry.getVendingText();
-                            table.Rows[n].Cells[7].Value = entry.getStaffingText();
+                        List<Entrance> ent = div.GetEntrances();
+
+                        foreach (Entrance entry in ent)
+                        {
+                            double lon = entry.getLongitude();
+                            if (lon >= longMin && lon <= longMax)
+                            {
+                                int n = table.Rows.Add();
+
+                                table.Rows[n].Cells[0].Value = div.getName();
+                                table.Rows[n].Cells[1].Value = entry.getLine();
+                                table.Rows[n].Cells[2].Value = entry.getStationName();
+                                table.Rows[n].Cells[3].Value = entry.getLatitude();
+                                table.Rows[n].Cells[4].Value = entry.getLongitude();
+                                table.Rows[n].Cells[5].Value = entry.getType();
+                                table.Rows[n].Cells[6].Value = entry.getVendingText();
+                                table.Rows[n].Cells[7].Value = entry.getStaffingText();
+                            }
                         }
                     }
                 }
@@ -398,6 +407,11 @@ namespace New_York_Subway
                     table.Rows[n].Cells[7].Value = entry.getStaffingText();
                 }
             }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

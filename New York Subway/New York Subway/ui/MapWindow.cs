@@ -27,6 +27,22 @@ namespace New_York_Subway
             gMap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
             gMap.Position = new GMap.NET.PointLatLng(40.6643, -73.9385);
+            gMap.ShowCenter = false;
+        }
+
+        private void divisionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
