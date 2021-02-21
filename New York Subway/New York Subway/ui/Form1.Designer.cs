@@ -50,19 +50,23 @@ namespace New_York_Subway
             this.LoadFileButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.searchLongitudeButton = new System.Windows.Forms.Button();
             this.searchLatitudeButton = new System.Windows.Forms.Button();
             this.searchNameButton = new System.Windows.Forms.Button();
             this.searchLineButton = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.staffingComboBox = new System.Windows.Forms.ComboBox();
+            this.vendingComboBox = new System.Windows.Forms.ComboBox();
+            this.typeComboBox = new System.Windows.Forms.ComboBox();
+            this.longMaxTextBox = new System.Windows.Forms.TextBox();
+            this.longMinTextBox = new System.Windows.Forms.TextBox();
+            this.latMaxTextBox = new System.Windows.Forms.TextBox();
+            this.latMinTextBox = new System.Windows.Forms.TextBox();
+            this.nameStationTextBox = new System.Windows.Forms.TextBox();
+            this.lineTextBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -70,10 +74,7 @@ namespace New_York_Subway
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.loadMapButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.resetTableButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -170,15 +171,15 @@ namespace New_York_Subway
             this.tabPage1.Controls.Add(this.searchLatitudeButton);
             this.tabPage1.Controls.Add(this.searchNameButton);
             this.tabPage1.Controls.Add(this.searchLineButton);
-            this.tabPage1.Controls.Add(this.comboBox4);
-            this.tabPage1.Controls.Add(this.comboBox3);
-            this.tabPage1.Controls.Add(this.comboBox2);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.staffingComboBox);
+            this.tabPage1.Controls.Add(this.vendingComboBox);
+            this.tabPage1.Controls.Add(this.typeComboBox);
+            this.tabPage1.Controls.Add(this.longMaxTextBox);
+            this.tabPage1.Controls.Add(this.longMinTextBox);
+            this.tabPage1.Controls.Add(this.latMaxTextBox);
+            this.tabPage1.Controls.Add(this.latMinTextBox);
+            this.tabPage1.Controls.Add(this.nameStationTextBox);
+            this.tabPage1.Controls.Add(this.lineTextBox);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -187,6 +188,43 @@ namespace New_York_Subway
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Filters";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Division:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(430, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Entrance Type:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(464, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Staffing:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(461, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Vending:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // searchLongitudeButton
             // 
@@ -232,91 +270,94 @@ namespace New_York_Subway
             this.searchLineButton.UseVisualStyleBackColor = true;
             this.searchLineButton.Click += new System.EventHandler(this.searchLineButton_Click);
             // 
-            // comboBox4
+            // staffingComboBox
             // 
-            this.comboBox4.Enabled = false;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Yes ",
-            "No"});
-            this.comboBox4.Location = new System.Drawing.Point(516, 114);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 9;
-            this.comboBox4.Text = "Staffing";
+            this.staffingComboBox.Enabled = false;
+            this.staffingComboBox.FormattingEnabled = true;
+            this.staffingComboBox.Items.AddRange(new object[] {
+            "Full",
+            "None"});
+            this.staffingComboBox.Location = new System.Drawing.Point(516, 114);
+            this.staffingComboBox.Name = "staffingComboBox";
+            this.staffingComboBox.Size = new System.Drawing.Size(121, 21);
+            this.staffingComboBox.TabIndex = 9;
+            this.staffingComboBox.Text = "Staffing";
+            this.staffingComboBox.SelectedIndexChanged += new System.EventHandler(this.staffingComboBox_SelectedIndexChanged);
             // 
-            // comboBox3
+            // vendingComboBox
             // 
-            this.comboBox3.Enabled = false;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.vendingComboBox.Enabled = false;
+            this.vendingComboBox.FormattingEnabled = true;
+            this.vendingComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox3.Location = new System.Drawing.Point(516, 67);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 8;
-            this.comboBox3.Text = "Vending";
+            this.vendingComboBox.Location = new System.Drawing.Point(516, 67);
+            this.vendingComboBox.Name = "vendingComboBox";
+            this.vendingComboBox.Size = new System.Drawing.Size(121, 21);
+            this.vendingComboBox.TabIndex = 8;
+            this.vendingComboBox.Text = "Vending";
+            this.vendingComboBox.SelectedIndexChanged += new System.EventHandler(this.vendingComboBox_SelectedIndexChanged);
             // 
-            // comboBox2
+            // typeComboBox
             // 
-            this.comboBox2.Enabled = false;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.typeComboBox.Enabled = false;
+            this.typeComboBox.FormattingEnabled = true;
+            this.typeComboBox.Items.AddRange(new object[] {
             "Stair",
             "Elevator",
-            "Easement,",
+            "Easement",
             "Escalator",
             "Door",
             "Ramp",
             "Walkway"});
-            this.comboBox2.Location = new System.Drawing.Point(516, 23);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.Text = "Entrance type";
+            this.typeComboBox.Location = new System.Drawing.Point(516, 23);
+            this.typeComboBox.Name = "typeComboBox";
+            this.typeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.typeComboBox.TabIndex = 7;
+            this.typeComboBox.Text = "Entrance type";
+            this.typeComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
             // 
-            // textBox6
+            // longMaxTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(165, 199);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(121, 20);
-            this.textBox6.TabIndex = 6;
+            this.longMaxTextBox.Location = new System.Drawing.Point(165, 199);
+            this.longMaxTextBox.Name = "longMaxTextBox";
+            this.longMaxTextBox.Size = new System.Drawing.Size(121, 20);
+            this.longMaxTextBox.TabIndex = 6;
             // 
-            // textBox5
+            // longMinTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(21, 199);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 20);
-            this.textBox5.TabIndex = 5;
+            this.longMinTextBox.Location = new System.Drawing.Point(21, 199);
+            this.longMinTextBox.Name = "longMinTextBox";
+            this.longMinTextBox.Size = new System.Drawing.Size(121, 20);
+            this.longMinTextBox.TabIndex = 5;
             // 
-            // textBox4
+            // latMaxTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(165, 158);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 20);
-            this.textBox4.TabIndex = 4;
+            this.latMaxTextBox.Location = new System.Drawing.Point(165, 158);
+            this.latMaxTextBox.Name = "latMaxTextBox";
+            this.latMaxTextBox.Size = new System.Drawing.Size(121, 20);
+            this.latMaxTextBox.TabIndex = 4;
             // 
-            // textBox3
+            // latMinTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(21, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 3;
+            this.latMinTextBox.Location = new System.Drawing.Point(21, 158);
+            this.latMinTextBox.Name = "latMinTextBox";
+            this.latMinTextBox.Size = new System.Drawing.Size(121, 20);
+            this.latMinTextBox.TabIndex = 3;
             // 
-            // textBox2
+            // nameStationTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(21, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 2;
+            this.nameStationTextBox.Location = new System.Drawing.Point(21, 114);
+            this.nameStationTextBox.Name = "nameStationTextBox";
+            this.nameStationTextBox.Size = new System.Drawing.Size(121, 20);
+            this.nameStationTextBox.TabIndex = 2;
             // 
-            // textBox1
+            // lineTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 1;
+            this.lineTextBox.Location = new System.Drawing.Point(21, 67);
+            this.lineTextBox.Name = "lineTextBox";
+            this.lineTextBox.Size = new System.Drawing.Size(121, 20);
+            this.lineTextBox.TabIndex = 1;
             // 
             // comboBox1
             // 
@@ -331,6 +372,7 @@ namespace New_York_Subway
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Text = "Division";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -408,48 +450,23 @@ namespace New_York_Subway
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label1
+            // resetTableButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(461, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Vending:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(464, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Staffing:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(430, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Entrance Type:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Division:";
+            this.resetTableButton.Enabled = false;
+            this.resetTableButton.Location = new System.Drawing.Point(791, 270);
+            this.resetTableButton.Name = "resetTableButton";
+            this.resetTableButton.Size = new System.Drawing.Size(92, 23);
+            this.resetTableButton.TabIndex = 8;
+            this.resetTableButton.Text = "Reset table";
+            this.resetTableButton.UseVisualStyleBackColor = true;
+            this.resetTableButton.Click += new System.EventHandler(this.resetTableButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 502);
+            this.Controls.Add(this.resetTableButton);
             this.Controls.Add(this.loadMapButton);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.LoadFileButton);
@@ -486,15 +503,15 @@ namespace New_York_Subway
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox staffingComboBox;
+        private System.Windows.Forms.ComboBox vendingComboBox;
+        private System.Windows.Forms.ComboBox typeComboBox;
+        private System.Windows.Forms.TextBox longMaxTextBox;
+        private System.Windows.Forms.TextBox longMinTextBox;
+        private System.Windows.Forms.TextBox latMaxTextBox;
+        private System.Windows.Forms.TextBox latMinTextBox;
+        private System.Windows.Forms.TextBox nameStationTextBox;
+        private System.Windows.Forms.TextBox lineTextBox;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button searchLongitudeButton;
         private System.Windows.Forms.Button searchLatitudeButton;
@@ -506,6 +523,7 @@ namespace New_York_Subway
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button resetTableButton;
     }
 }
 
