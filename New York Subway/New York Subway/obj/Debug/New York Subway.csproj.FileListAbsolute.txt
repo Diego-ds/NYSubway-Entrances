@@ -25,3 +25,17 @@ C:\Users\prestamo\Documents\GitHub\NYSubway-Entrances\New York Subway\New York S
 C:\Users\prestamo\Documents\GitHub\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New York Subway.exe
 C:\Users\prestamo\Documents\GitHub\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New York Subway.pdb
 C:\Users\prestamo\Documents\GitHub\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New_York_Subway.Form2.resources
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\bin\Debug\New York Subway.exe.config
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\bin\Debug\New York Subway.exe
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\bin\Debug\New York Subway.pdb
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\bin\Debug\GMap.NET.Core.dll
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New York Subway.csprojAssemblyReference.cache
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New_York_Subway.Form1.resources
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New_York_Subway.Properties.Resources.resources
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New_York_Subway.Form2.resources
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New York Subway.csproj.GenerateResource.cache
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New York Subway.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New York Subway.csproj.CopyComplete
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New York Subway.exe
+C:\Users\User\Desktop\NYSubway-Entrances\New York Subway\New York Subway\obj\Debug\New York Subway.pdb

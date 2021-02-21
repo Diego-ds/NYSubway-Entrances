@@ -8,7 +8,6 @@ namespace New_York_Subway.model
 {
     class Entrance
     {
-        private String division;
         private String line;
         private String stationName;
         private double latitude;
@@ -18,9 +17,8 @@ namespace New_York_Subway.model
         private bool staffing;
 
         // Constructor
-        public Entrance(string division, string line, string stationName, double latitude, double longitude, string type, bool vending, bool staffing)
+        public Entrance(string line, string stationName, double latitude, double longitude, string type, bool vending, bool staffing)
         {
-            this.division = division;
             this.line = line;
             this.stationName = stationName;
             this.latitude = latitude;
@@ -31,12 +29,6 @@ namespace New_York_Subway.model
         }
 
         //Getters and setters
-        
-        public string getDivision()
-        {
-            return division;
-        }
-
         public string getLine()
         {
             return line;
@@ -72,9 +64,28 @@ namespace New_York_Subway.model
             return staffing;
         }
 
-        public void setDivision(string division)
+        public string getStaffingText()
         {
-            this.division = division;
+            if (staffing == true)
+            {
+                return "Full";
+            }
+            else
+            {
+                return "None";
+            }
+        }
+
+        public string getVendingText()
+        {
+            if (vending == true)
+            {
+                return "Yes";
+            }
+            else
+            {
+                return "No";
+            }
         }
 
         public void setLine(string line)

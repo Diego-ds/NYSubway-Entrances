@@ -24,9 +24,9 @@ namespace New_York_Subway.model
 
         //Methods
 
-        public void addEntrance(string division, string line, string stationName, double latitude, double longitude, string type, bool vending, bool staffing)
+        public void addEntrance(string line, string stationName, double latitude, double longitude, string type, bool vending, bool staffing)
         {
-            entrances.Add(new Entrance(division, line, stationName, latitude, longitude, type, vending, staffing));
+            entrances.Add(new Entrance(line, stationName, latitude, longitude, type, vending, staffing));
             size++;
         }
 
@@ -35,6 +35,16 @@ namespace New_York_Subway.model
         public List<Entrance> GetEntrances()
         {
             return entrances;
+        }
+
+        public string getName()
+        {
+            return name;
+        }
+
+        public void setName(string name)
+        {
+            this.name = name;
         }
     }
 }

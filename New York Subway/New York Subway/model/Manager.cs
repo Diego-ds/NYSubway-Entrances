@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace New_York_Subway.model
 {
-    class Manager
+    public class Manager
     {
         private Hashtable divisions;
 
@@ -24,13 +24,13 @@ namespace New_York_Subway.model
             }
         }
 
-        public void addEntrance(string divName,string division, string line, string stationName, double latitude, double longitude, string type, bool vending, bool staffing)
+        public void addEntrance(string divName, string line, string stationName, double latitude, double longitude, string type, bool vending, bool staffing)
         {
             Division div = (Division)divisions[divName];
-            div.addEntrance(division, line, stationName, latitude, longitude, type, vending, staffing);
+            div.addEntrance(line, stationName, latitude, longitude, type, vending, staffing);
         }
 
-        public Hashtable GetDivisions()
+        public Hashtable getDivisions()
         {
             return divisions;
         }

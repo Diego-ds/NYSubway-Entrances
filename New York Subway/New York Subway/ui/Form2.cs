@@ -1,4 +1,5 @@
-﻿using System;
+﻿using New_York_Subway.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace New_York_Subway
 {
     public partial class Form2 : Form
     {
-        public Form2()
+
+        private Manager manager;
+
+        public Form2(Manager manager)
         {
             InitializeComponent();
+            this.manager = manager;
         }
 
         private void gMap_Load(object sender, EventArgs e)
