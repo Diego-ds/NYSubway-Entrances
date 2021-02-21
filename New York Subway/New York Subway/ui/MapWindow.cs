@@ -47,8 +47,6 @@ namespace New_York_Subway
 
         private void overlayCreation()
         {
-            
-
             markerAssignation();
         }
 

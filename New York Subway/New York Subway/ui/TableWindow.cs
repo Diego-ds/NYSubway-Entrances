@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 
@@ -46,8 +47,8 @@ namespace New_York_Subway
                             staffing = true;
                         }
 
-                        manager.addEntrance(report[0], report[1], report[2], Double.Parse(report[6]),
-                            Double.Parse(report[7]), report[3], vending, staffing);
+                        manager.addEntrance(report[0], report[1], report[2], Convert.ToDouble(report[6], CultureInfo.InvariantCulture),
+                            Convert.ToDouble(report[7], CultureInfo.InvariantCulture), report[3], vending, staffing);
                         raw = reader.ReadLine();
                     }
                 }
@@ -412,6 +413,25 @@ namespace New_York_Subway
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void graphButton_Click(object sender, EventArgs e)
+        {
+            pieChart.Titles.Add("Divisions");
+            pieChart.Series["Series1"].IsValueShownAsLabel = true;
+            barChart.Titles.Add("Divisions");
+            barChart.Series["Series1"].IsValueShownAsLabel = true;
+            PointsChart.Titles.Add("Divisions");
+            PointsChart.Series["Series1"].IsValueShownAsLabel = true;
+
+            Hashtable temp = manager.getDivisions();
+            foreach (DictionaryEntry element in temp)
+            {
+                Division div = (Division)element.Value;
+                pieChart.Series["Series1"].Points.AddXY(div.getName(), div.getSize());
+                barChart.Series["Series1"].Points.AddXY(div.getName(), div.getSize());
+                PointsChart.Series["Series1"].Points.AddXY(div.getName(), div.getSize());
+            }
         }
     }
 }

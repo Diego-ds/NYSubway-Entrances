@@ -29,15 +29,15 @@ namespace New_York_Subway
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.table = new System.Windows.Forms.DataGridView();
             this.Division = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Line = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,19 +73,20 @@ namespace New_York_Subway
             this.lineTextBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.PointsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.barChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.loadMapButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.resetTableButton = new System.Windows.Forms.Button();
+            this.graphButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PointsChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pieChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barChart)).BeginInit();
             this.SuspendLayout();
             // 
             // table
@@ -421,9 +422,9 @@ namespace New_York_Subway
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.chart3);
-            this.tabPage2.Controls.Add(this.chart2);
-            this.tabPage2.Controls.Add(this.chart1);
+            this.tabPage2.Controls.Add(this.PointsChart);
+            this.tabPage2.Controls.Add(this.pieChart);
+            this.tabPage2.Controls.Add(this.barChart);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -432,53 +433,55 @@ namespace New_York_Subway
             this.tabPage2.Text = "Graphs";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // chart3
+            // PointsChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart3.Legends.Add(legend1);
-            this.chart3.Location = new System.Drawing.Point(498, 24);
-            this.chart3.Name = "chart3";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart3.Series.Add(series1);
-            this.chart3.Size = new System.Drawing.Size(242, 187);
-            this.chart3.TabIndex = 2;
-            this.chart3.Text = "chart3";
+            chartArea4.Name = "ChartArea1";
+            this.PointsChart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.PointsChart.Legends.Add(legend4);
+            this.PointsChart.Location = new System.Drawing.Point(498, 24);
+            this.PointsChart.Name = "PointsChart";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.PointsChart.Series.Add(series4);
+            this.PointsChart.Size = new System.Drawing.Size(242, 187);
+            this.PointsChart.TabIndex = 2;
+            this.PointsChart.Text = "chart3";
             // 
-            // chart2
+            // pieChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(254, 24);
-            this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(242, 187);
-            this.chart2.TabIndex = 1;
-            this.chart2.Text = "chart2";
+            chartArea5.Name = "ChartArea1";
+            this.pieChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.pieChart.Legends.Add(legend5);
+            this.pieChart.Location = new System.Drawing.Point(254, 24);
+            this.pieChart.Name = "pieChart";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.pieChart.Series.Add(series5);
+            this.pieChart.Size = new System.Drawing.Size(242, 187);
+            this.pieChart.TabIndex = 1;
+            this.pieChart.Text = "chart2";
             // 
-            // chart1
+            // barChart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(6, 24);
-            this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(242, 187);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            chartArea6.Name = "ChartArea1";
+            this.barChart.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.barChart.Legends.Add(legend6);
+            this.barChart.Location = new System.Drawing.Point(6, 24);
+            this.barChart.Name = "barChart";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.barChart.Series.Add(series6);
+            this.barChart.Size = new System.Drawing.Size(242, 187);
+            this.barChart.TabIndex = 0;
+            this.barChart.Text = "chart1";
             // 
             // loadMapButton
             // 
@@ -506,11 +509,22 @@ namespace New_York_Subway
             this.resetTableButton.UseVisualStyleBackColor = true;
             this.resetTableButton.Click += new System.EventHandler(this.resetTableButton_Click);
             // 
+            // graphButton
+            // 
+            this.graphButton.Location = new System.Drawing.Point(791, 434);
+            this.graphButton.Name = "graphButton";
+            this.graphButton.Size = new System.Drawing.Size(96, 23);
+            this.graphButton.TabIndex = 9;
+            this.graphButton.Text = "Generate graph";
+            this.graphButton.UseVisualStyleBackColor = true;
+            this.graphButton.Click += new System.EventHandler(this.graphButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 502);
+            this.Controls.Add(this.graphButton);
             this.Controls.Add(this.resetTableButton);
             this.Controls.Add(this.loadMapButton);
             this.Controls.Add(this.tabControl1);
@@ -523,9 +537,9 @@ namespace New_York_Subway
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PointsChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pieChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -545,9 +559,9 @@ namespace New_York_Subway
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart PointsChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart pieChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart barChart;
         private System.Windows.Forms.ComboBox staffingComboBox;
         private System.Windows.Forms.ComboBox vendingComboBox;
         private System.Windows.Forms.ComboBox typeComboBox;
@@ -573,6 +587,7 @@ namespace New_York_Subway
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button graphButton;
     }
 }
 

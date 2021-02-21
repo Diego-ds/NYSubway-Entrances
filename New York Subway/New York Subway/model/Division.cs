@@ -46,5 +46,10 @@ namespace New_York_Subway.model
         {
             this.name = name;
         }
+
+        public int getSize()
+        {
+            return size;
+        }
     }
 }
