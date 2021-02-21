@@ -84,7 +84,16 @@ namespace New_York_Subway
                 }
 
             }
+            searchLineButton.Enabled = true;
+            searchNameButton.Enabled = true;
+            searchLatitudeButton.Enabled = true;
+            searchLongitudeButton.Enabled = true;
+            loadMapButton.Enabled = true;
+            
             comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
+            comboBox3.Enabled = true;
+            comboBox4.Enabled = true;
         }
 
         private void searchLineButton_Click(object sender, EventArgs e)
@@ -111,6 +120,11 @@ namespace New_York_Subway
         {
             this.Hide();
             form2.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
