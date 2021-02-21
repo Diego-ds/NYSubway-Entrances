@@ -82,7 +82,7 @@ namespace New_York_Subway
             searchLongitudeButton.Enabled = true;
             loadMapButton.Enabled = true;
             resetTableButton.Enabled = true;
-
+            graphButton.Enabled = true;
             comboBox1.Enabled = true;
             typeComboBox.Enabled = true;
             vendingComboBox.Enabled = true;
@@ -432,6 +432,7 @@ namespace New_York_Subway
                 barChart.Series["Series1"].Points.AddXY(div.getName(), div.getSize());
                 PointsChart.Series["Series1"].Points.AddXY(div.getName(), div.getSize());
             }
-        }
+            graphButton.Enabled = false;
+        }  
     }
 }
